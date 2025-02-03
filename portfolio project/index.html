@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Arafa</a>
+        
+        <nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link">Skills</a></li>
+                <li><a href="#" class="nav-link">Education</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img class="profile" src="img/4dce14da-8f9a-455c-b71e-b0b510528f64.jpg" alt="Profile Picture">
+        </div>
+        <div class="home-content">
+            <h1>Hi, it's <span class="name">Arafa</span></h1>
+            <h3 class="typing-text">I'm a <span>beginner web developer</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, aut? Adipisci dolor quaerat ea exercitationem doloribus nisi et alias.</p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a> 
+                <a href="#"><i class="fa-brands fa-github"></i></a> 
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a> 
+                <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <section class="services section">
+        <h2 class="sections_title">My Services</h2>
+        <div class="icons">
+          <div class="icon"><i class="fa-solid fa-laptop"></i></div>
+          <div class="icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <div class="icon"><i class="fa-solid fa-code"></i></div>
+        </div>
+    </section>
+
+    <section class="skills_section">
+        <h2 class="sections_title">My Skills</h2>
+        <div class="skills-list">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">React</div>
+        </div>
+    </section>
+
+    <section class="education section">
+        <h2 class="sections_title">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>2025</strong> - Web Development Certification
+          </div>
+          <div class="timeline-item">
+            <strong>2023</strong> - Computer Science Degree
+          </div>
+        </div>
+    </section>
+
+    <section class="contact section">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit" class="button">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-link").forEach(n => 
+            n.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            })
+        );
+    </script>
+</body>
+</html>
